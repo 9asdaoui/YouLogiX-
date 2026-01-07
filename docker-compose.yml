@@ -1,0 +1,23 @@
+services:
+  # The Database Service
+  db:
+    image: postgres:15
+    container_name: youlogix_db_container
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=redaader
+      - POSTGRES_DB=youlogix_db
+    ports:
+      - "5432:5432"
+
+  # The FastAPI App Service
+  app:
+    build: .
+    container_name: youlogix_app_container
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - db
