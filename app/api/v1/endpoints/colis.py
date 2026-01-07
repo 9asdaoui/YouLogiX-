@@ -8,8 +8,28 @@ from app.schemas import colis as schema_colis
 router = APIRouter()
 
 @router.get("/", response_model=List[schema_colis.Colis])
-def read_all_colis(db: Session = Depends(get_db)):
-    return crud_colis.get_colis(db)
+def read_all_colis(
+    db: Session = Depends(get_db),
+    idZone: int = None,
+    statut: str = None
+):
+    return crud_colis.get_colis(db, id_zone=idZone, statut=statut)
+
+@router.get("/client/{client_id}", response_model=List[schema_colis.Colis])
+def read_client_packages(client_id: int, db: Session = Depends(get_db)):
+    packages = crud_colis.get_colis_by_client(db, client_id=client_id)
+    return packages
+
+@router.get("/{colis_id}", response_model=schema_colis.Colis)
+def read_single_colis(colis_id: int, db: Session = Depends(get_db)):
+    package = crud_colis.get_colis_by_id(db, colis_id=colis_id)
+    if not package:
+        raise HTTPException(status_code=404, detail="Package not found")
+    return package
+
+@router.get("/livreur/{livreur_id}", response_model=List[schema_colis.Colis])
+def read_livreur_packages(livreur_id: int, db: Session = Depends(get_db)):
+    return crud_colis.get_colis_by_livreur(db, livreur_id=livreur_id)
 
 @router.post("/", response_model=schema_colis.Colis)
 def create_new_colis(colis: schema_colis.ColisCreate, db: Session = Depends(get_db)):
