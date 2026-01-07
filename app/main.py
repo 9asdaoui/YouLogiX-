@@ -10,8 +10,24 @@ from app.api.v1.endpoints import zones, livreurs, clients, destinataires, colis
 
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title=settings.PROJECT_NAME)
+# app = FastAPI(title=settings.PROJECT_NAME)
 
+app = FastAPI(
+    title="YouLogiX — Plateforme Logistique",
+    description="""
+    API de gestion des opérations logistiques pour YouExpress.
+    
+    ### Utilisateurs:
+    * **Gestionnaire**: CRUD complet sur tout le système.
+    * **Livreur**: Mise à jour du statut des colis.
+    * **Client**: Suivi des envois.
+    """,
+    version="1.0.0",
+    contact={
+        "name": "Oussama Qasdaoui",
+        "email": "oussamaqasdaoui@gmail.com",
+    }
+)
 
 @app.get("/")
 def read_root():

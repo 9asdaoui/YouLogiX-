@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 class DestinataireBase(BaseModel):
     nom: str
@@ -12,6 +12,4 @@ class DestinataireCreate(DestinataireBase):
 
 class Destinataire(DestinataireBase):
     id: int
-    class Config:
-        from_attributes = True
-        
+    model_config = ConfigDict(from_attributes=True)

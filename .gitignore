@@ -74,506 +74,394 @@ db  | 2026-01-07 09:27:51.833 | 2026-01-07 08:27:51.833 UTC [29] LOG:  database 
 db  | 2026-01-07 09:27:51.850 | 2026-01-07 08:27:51.850 UTC [1] LOG:  database system is ready to accept connections
 db  | 2026-01-07 09:32:51.603 | 2026-01-07 08:32:51.601 UTC [27] LOG:  checkpoint starting: time
 db  | 2026-01-07 09:32:51.689 | 2026-01-07 08:32:51.688 UTC [27] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.025 s, sync=0.012 s, total=0.087 s; sync files=2, longest=0.006 s, average=0.006 s; distance=0 kB, estimate=0 kB
-app | 2026-01-07 09:33:53.321 | INFO:     Started server process [1]
-app | 2026-01-07 09:33:53.321 | INFO:     Waiting for application startup.
-app | 2026-01-07 09:33:53.321 | INFO:     Application startup complete.
-app | 2026-01-07 09:33:53.325 | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 db  | 2026-01-07 09:37:51.341 | 2026-01-07 08:37:51.341 UTC [27] LOG:  checkpoint starting: time
 db  | 2026-01-07 09:37:56.835 | 2026-01-07 08:37:56.835 UTC [27] LOG:  checkpoint complete: wrote 55 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.427 s, sync=0.049 s, total=5.494 s; sync files=49, longest=0.004 s, average=0.001 s; distance=204 kB, estimate=204 kB
-app | 2026-01-07 09:43:32.525 | INFO:     Shutting down
-app | 2026-01-07 09:43:32.626 | INFO:     Waiting for application shutdown.
-app | 2026-01-07 09:43:32.626 | INFO:     Application shutdown complete.
-app | 2026-01-07 09:43:32.626 | INFO:     Finished server process [1]
-app | 2026-01-07 09:43:33.259 | Error response from daemon: can not get logs from container which is dead or marked for removal
-app | 2026-01-07 09:43:34.901 | Traceback (most recent call last):
-app | 2026-01-07 09:43:34.901 |   File "/usr/local/bin/uvicorn", line 8, in <module>
-app | 2026-01-07 09:43:34.901 |     sys.exit(main())
-app | 2026-01-07 09:43:34.901 |              ^^^^^^
-app | 2026-01-07 09:43:34.901 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1485, in __call__
-app | 2026-01-07 09:43:34.903 |     return self.main(*args, **kwargs)
-app | 2026-01-07 09:43:34.903 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.903 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1406, in main
-app | 2026-01-07 09:43:34.901 | Traceback (most recent call last):
-app | 2026-01-07 09:43:34.901 |   File "/usr/local/bin/uvicorn", line 8, in <module>
-app | 2026-01-07 09:43:34.901 |     sys.exit(main())
-app | 2026-01-07 09:43:34.901 |              ^^^^^^
-app | 2026-01-07 09:43:34.901 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1485, in __call__
-app | 2026-01-07 09:43:34.903 |     return self.main(*args, **kwargs)
-app | 2026-01-07 09:43:34.903 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.903 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1406, in main
-app | 2026-01-07 09:43:34.903 |     rv = self.invoke(ctx)
-app | 2026-01-07 09:43:34.903 |          ^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.903 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1269, in invoke
-app | 2026-01-07 09:43:34.904 |     return ctx.invoke(self.callback, **ctx.params)
-app | 2026-01-07 09:43:34.903 |     rv = self.invoke(ctx)
-app | 2026-01-07 09:43:34.903 |          ^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.903 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1269, in invoke
-app | 2026-01-07 09:43:34.904 |     return ctx.invoke(self.callback, **ctx.params)
-app | 2026-01-07 09:43:34.904 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.904 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 824, in invoke
-app | 2026-01-07 09:43:34.905 |     return callback(*args, **kwargs)
-app | 2026-01-07 09:43:34.905 |            ^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.905 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 424, in main
-app | 2026-01-07 09:43:34.904 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.904 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 824, in invoke
-app | 2026-01-07 09:43:34.905 |     return callback(*args, **kwargs)
-app | 2026-01-07 09:43:34.905 |            ^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.905 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 424, in main
-app | 2026-01-07 09:43:34.906 |     run(
-app | 2026-01-07 09:43:34.907 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 594, in run
-app | 2026-01-07 09:43:34.907 |     server.run()
-app | 2026-01-07 09:43:34.907 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 67, in run
-app | 2026-01-07 09:43:34.907 |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
-app | 2026-01-07 09:43:34.906 |     run(
-app | 2026-01-07 09:43:34.907 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 594, in run
-app | 2026-01-07 09:43:34.907 |     server.run()
-app | 2026-01-07 09:43:34.907 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 67, in run
-app | 2026-01-07 09:43:34.907 |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
-app | 2026-01-07 09:43:34.907 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.907 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
-app | 2026-01-07 09:43:34.907 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.907 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
-app | 2026-01-07 09:43:34.908 |     return runner.run(main)
-app | 2026-01-07 09:43:34.908 |            ^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.908 |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
-app | 2026-01-07 09:43:34.908 |     return runner.run(main)
-app | 2026-01-07 09:43:34.908 |            ^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.908 |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
-app | 2026-01-07 09:43:34.908 |     return self._loop.run_until_complete(task)
-app | 2026-01-07 09:43:34.908 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.908 |   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
-app | 2026-01-07 09:43:34.908 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 71, in serve
-app | 2026-01-07 09:43:34.909 |     await self._serve(sockets)
-app | 2026-01-07 09:43:34.909 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 78, in _serve
-app | 2026-01-07 09:43:34.909 |     config.load()
-app | 2026-01-07 09:43:34.909 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 439, in load
-app | 2026-01-07 09:43:34.908 |     return self._loop.run_until_complete(task)
-app | 2026-01-07 09:43:34.908 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.908 |   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
-app | 2026-01-07 09:43:34.908 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 71, in serve
-app | 2026-01-07 09:43:34.909 |     await self._serve(sockets)
-app | 2026-01-07 09:43:34.909 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 78, in _serve
-app | 2026-01-07 09:43:34.909 |     config.load()
-app | 2026-01-07 09:43:34.909 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 439, in load
-app | 2026-01-07 09:43:34.909 |     self.loaded_app = import_from_string(self.app)
-app | 2026-01-07 09:43:34.909 |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.909 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
-app | 2026-01-07 09:43:34.910 |     module = importlib.import_module(module_str)
-app | 2026-01-07 09:43:34.910 |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.910 |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
-app | 2026-01-07 09:43:34.909 |     self.loaded_app = import_from_string(self.app)
-app | 2026-01-07 09:43:34.909 |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.909 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
-app | 2026-01-07 09:43:34.910 |     module = importlib.import_module(module_str)
-app | 2026-01-07 09:43:34.910 |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.910 |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
-app | 2026-01-07 09:43:34.911 |     return _bootstrap._gcd_import(name[level:], package, level)
-app | 2026-01-07 09:43:34.911 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.911 |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
-app | 2026-01-07 09:43:34.911 |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
-app | 2026-01-07 09:43:34.911 |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
-app | 2026-01-07 09:43:34.911 |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
-app | 2026-01-07 09:43:34.911 |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
-app | 2026-01-07 09:43:34.911 |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-app | 2026-01-07 09:43:34.911 |   File "/code/app/main.py", line 6, in <module>
-app | 2026-01-07 09:43:34.911 |     from app.db.session import engixne
-app | 2026-01-07 09:43:34.911 | ImportError: cannot import name 'engixne' from 'app.db.session' (/code/app/db/session.py)
-app | 2026-01-07 09:43:34.911 |     return _bootstrap._gcd_import(name[level:], package, level)
-app | 2026-01-07 09:43:34.911 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:43:34.911 |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
-app | 2026-01-07 09:43:34.911 |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
-app | 2026-01-07 09:43:34.911 |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
-app | 2026-01-07 09:43:34.911 |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
-app | 2026-01-07 09:43:34.911 |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
-app | 2026-01-07 09:43:34.911 |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-app | 2026-01-07 09:43:34.911 |   File "/code/app/main.py", line 6, in <module>
-app | 2026-01-07 09:43:34.911 |     from app.db.session import engixne
-app | 2026-01-07 09:43:34.911 | ImportError: cannot import name 'engixne' from 'app.db.session' (/code/app/db/session.py)
-app | 2026-01-07 09:45:00.643 | Traceback (most recent call last):
-app | 2026-01-07 09:45:00.643 |   File "/usr/local/bin/uvicorn", line 8, in <module>
-app | 2026-01-07 09:45:00.643 |     sys.exit(main())
-app | 2026-01-07 09:45:00.643 |              ^^^^^^
-app | 2026-01-07 09:45:00.643 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1485, in __call__
-app | 2026-01-07 09:45:00.645 |     return self.main(*args, **kwargs)
-app | 2026-01-07 09:45:00.645 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.645 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1406, in main
-app | 2026-01-07 09:45:00.643 | Traceback (most recent call last):
-app | 2026-01-07 09:45:00.643 |   File "/usr/local/bin/uvicorn", line 8, in <module>
-app | 2026-01-07 09:45:00.643 |     sys.exit(main())
-app | 2026-01-07 09:45:00.643 |              ^^^^^^
-app | 2026-01-07 09:45:00.643 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1485, in __call__
-app | 2026-01-07 09:45:00.645 |     return self.main(*args, **kwargs)
-app | 2026-01-07 09:45:00.645 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.645 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1406, in main
-app | 2026-01-07 09:45:00.645 |     rv = self.invoke(ctx)
-app | 2026-01-07 09:45:00.645 |          ^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.645 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1269, in invoke
-app | 2026-01-07 09:45:00.645 |     rv = self.invoke(ctx)
-app | 2026-01-07 09:45:00.645 |          ^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.645 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1269, in invoke
-app | 2026-01-07 09:45:00.646 |     return ctx.invoke(self.callback, **ctx.params)
-app | 2026-01-07 09:45:00.646 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.646 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 824, in invoke
-app | 2026-01-07 09:45:00.646 |     return callback(*args, **kwargs)
-app | 2026-01-07 09:45:00.646 |     return ctx.invoke(self.callback, **ctx.params)
-app | 2026-01-07 09:45:00.646 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.646 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 824, in invoke
-app | 2026-01-07 09:45:00.646 |     return callback(*args, **kwargs)
-app | 2026-01-07 09:45:00.646 |            ^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.646 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 424, in main
-app | 2026-01-07 09:45:00.647 |     run(
-app | 2026-01-07 09:45:00.646 |            ^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.646 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 424, in main
-app | 2026-01-07 09:45:00.647 |     run(
-app | 2026-01-07 09:45:00.647 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 594, in run
-app | 2026-01-07 09:45:00.647 |     server.run()
-app | 2026-01-07 09:45:00.647 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 67, in run
-app | 2026-01-07 09:45:00.648 |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
-app | 2026-01-07 09:45:00.648 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.648 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
-app | 2026-01-07 09:45:00.647 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 594, in run
-app | 2026-01-07 09:45:00.647 |     server.run()
-app | 2026-01-07 09:45:00.647 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 67, in run
-app | 2026-01-07 09:45:00.648 |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
-app | 2026-01-07 09:45:00.648 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.648 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
-app | 2026-01-07 09:45:00.648 |     return runner.run(main)
-app | 2026-01-07 09:45:00.648 |            ^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.648 |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
-app | 2026-01-07 09:45:00.649 |     return self._loop.run_until_complete(task)
-app | 2026-01-07 09:45:00.649 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.649 |   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
-app | 2026-01-07 09:45:00.649 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 71, in serve
-app | 2026-01-07 09:45:00.649 |     await self._serve(sockets)
-app | 2026-01-07 09:45:00.649 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 78, in _serve
-app | 2026-01-07 09:45:00.649 |     config.load()
-app | 2026-01-07 09:45:00.649 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 439, in load
-app | 2026-01-07 09:45:00.648 |     return runner.run(main)
-app | 2026-01-07 09:45:00.648 |            ^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.648 |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
-app | 2026-01-07 09:45:00.649 |     return self._loop.run_until_complete(task)
-app | 2026-01-07 09:45:00.649 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.649 |   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
-app | 2026-01-07 09:45:00.649 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 71, in serve
-app | 2026-01-07 09:45:00.649 |     await self._serve(sockets)
-app | 2026-01-07 09:45:00.649 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 78, in _serve
-app | 2026-01-07 09:45:00.649 |     config.load()
-app | 2026-01-07 09:45:00.649 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 439, in load
-app | 2026-01-07 09:45:00.650 |     self.loaded_app = import_from_string(self.app)
-app | 2026-01-07 09:45:00.650 |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.650 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
-app | 2026-01-07 09:45:00.650 |     module = importlib.import_module(module_str)
-app | 2026-01-07 09:45:00.650 |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.650 |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
-app | 2026-01-07 09:45:00.650 |     self.loaded_app = import_from_string(self.app)
-app | 2026-01-07 09:45:00.650 |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.650 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
-app | 2026-01-07 09:45:00.650 |     module = importlib.import_module(module_str)
-app | 2026-01-07 09:45:00.650 |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.650 |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
-app | 2026-01-07 09:45:00.651 |     return _bootstrap._gcd_import(name[level:], package, level)
-app | 2026-01-07 09:45:00.651 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.651 |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
-app | 2026-01-07 09:45:00.651 |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
-app | 2026-01-07 09:45:00.651 |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
-app | 2026-01-07 09:45:00.651 |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
-app | 2026-01-07 09:45:00.651 |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
-app | 2026-01-07 09:45:00.651 |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-app | 2026-01-07 09:45:00.651 |   File "/code/app/main.py", line 6, in <module>
-app | 2026-01-07 09:45:00.651 |     from app.db.session import engixne
-app | 2026-01-07 09:45:00.651 | ImportError: cannot import name 'engixne' from 'app.db.session' (/code/app/db/session.py)
-app | 2026-01-07 09:45:00.651 |     return _bootstrap._gcd_import(name[level:], package, level)
-app | 2026-01-07 09:45:00.651 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:00.651 |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
-app | 2026-01-07 09:45:00.651 |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
-app | 2026-01-07 09:45:00.651 |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
-app | 2026-01-07 09:45:00.651 |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
-app | 2026-01-07 09:45:00.651 |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
-app | 2026-01-07 09:45:00.651 |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-app | 2026-01-07 09:45:00.651 |   File "/code/app/main.py", line 6, in <module>
-app | 2026-01-07 09:45:00.651 |     from app.db.session import engixne
-app | 2026-01-07 09:45:00.651 | ImportError: cannot import name 'engixne' from 'app.db.session' (/code/app/db/session.py)
-app | 2026-01-07 09:45:23.565 | Traceback (most recent call last):
-app | 2026-01-07 09:45:23.565 |   File "/usr/local/bin/uvicorn", line 8, in <module>
-app | 2026-01-07 09:45:23.565 |     sys.exit(main())
-app | 2026-01-07 09:45:23.565 |              ^^^^^^
-app | 2026-01-07 09:45:23.565 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1485, in __call__
-app | 2026-01-07 09:45:23.565 |     return self.main(*args, **kwargs)
-app | 2026-01-07 09:45:23.565 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.565 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1406, in main
-app | 2026-01-07 09:45:23.565 |     rv = self.invoke(ctx)
-app | 2026-01-07 09:45:23.565 |          ^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.565 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1269, in invoke
-app | 2026-01-07 09:45:23.566 |     return ctx.invoke(self.callback, **ctx.params)
-app | 2026-01-07 09:45:23.566 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 824, in invoke
-app | 2026-01-07 09:45:23.566 |     return callback(*args, **kwargs)
-app | 2026-01-07 09:45:23.566 |            ^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 424, in main
-app | 2026-01-07 09:45:23.566 |     run(
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 594, in run
-app | 2026-01-07 09:45:23.566 |     server.run()
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 67, in run
-app | 2026-01-07 09:45:23.566 |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
-app | 2026-01-07 09:45:23.566 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
-app | 2026-01-07 09:45:23.566 |     return runner.run(main)
-app | 2026-01-07 09:45:23.566 |            ^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
-app | 2026-01-07 09:45:23.566 |     return self._loop.run_until_complete(task)
-app | 2026-01-07 09:45:23.566 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 71, in serve
-app | 2026-01-07 09:45:23.566 |     await self._serve(sockets)
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 78, in _serve
-app | 2026-01-07 09:45:23.566 |     config.load()
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 439, in load
-app | 2026-01-07 09:45:23.566 |     self.loaded_app = import_from_string(self.app)
-app | 2026-01-07 09:45:23.566 |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
-app | 2026-01-07 09:45:23.566 |     module = importlib.import_module(module_str)
-app | 2026-01-07 09:45:23.566 |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
-app | 2026-01-07 09:45:23.566 |     return _bootstrap._gcd_import(name[level:], package, level)
-app | 2026-01-07 09:45:23.566 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
-app | 2026-01-07 09:45:23.566 |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
-app | 2026-01-07 09:45:23.566 |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
-app | 2026-01-07 09:45:23.566 |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
-app | 2026-01-07 09:45:23.567 |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
-app | 2026-01-07 09:45:23.567 |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-app | 2026-01-07 09:45:23.567 |   File "/code/app/main.py", line 6, in <module>
-app | 2026-01-07 09:45:23.567 |     from app.db.session import engixne
-app | 2026-01-07 09:45:23.567 | ImportError: cannot import name 'engixne' from 'app.db.session' (/code/app/db/session.py)
-app | 2026-01-07 09:45:23.565 | Traceback (most recent call last):
-app | 2026-01-07 09:45:23.565 |   File "/usr/local/bin/uvicorn", line 8, in <module>
-app | 2026-01-07 09:45:23.565 |     sys.exit(main())
-app | 2026-01-07 09:45:23.565 |              ^^^^^^
-app | 2026-01-07 09:45:23.565 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1485, in __call__
-app | 2026-01-07 09:45:23.565 |     return self.main(*args, **kwargs)
-app | 2026-01-07 09:45:23.565 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.565 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1406, in main
-app | 2026-01-07 09:45:23.565 |     rv = self.invoke(ctx)
-app | 2026-01-07 09:45:23.565 |          ^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.565 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1269, in invoke
-app | 2026-01-07 09:45:23.566 |     return ctx.invoke(self.callback, **ctx.params)
-app | 2026-01-07 09:45:23.566 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 824, in invoke
-app | 2026-01-07 09:45:23.566 |     return callback(*args, **kwargs)
-app | 2026-01-07 09:45:23.566 |            ^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 424, in main
-app | 2026-01-07 09:45:23.566 |     run(
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 594, in run
-app | 2026-01-07 09:45:23.566 |     server.run()
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 67, in run
-app | 2026-01-07 09:45:23.566 |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
-app | 2026-01-07 09:45:23.566 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
-app | 2026-01-07 09:45:23.566 |     return runner.run(main)
-app | 2026-01-07 09:45:23.566 |            ^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
-app | 2026-01-07 09:45:23.566 |     return self._loop.run_until_complete(task)
-app | 2026-01-07 09:45:23.566 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 71, in serve
-app | 2026-01-07 09:45:23.566 |     await self._serve(sockets)
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 78, in _serve
-app | 2026-01-07 09:45:23.566 |     config.load()
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 439, in load
-app | 2026-01-07 09:45:23.566 |     self.loaded_app = import_from_string(self.app)
-app | 2026-01-07 09:45:23.566 |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
-app | 2026-01-07 09:45:23.566 |     module = importlib.import_module(module_str)
-app | 2026-01-07 09:45:23.566 |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
-app | 2026-01-07 09:45:23.566 |     return _bootstrap._gcd_import(name[level:], package, level)
-app | 2026-01-07 09:45:23.566 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 09:45:23.566 |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
-app | 2026-01-07 09:45:23.566 |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
-app | 2026-01-07 09:45:23.566 |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
-app | 2026-01-07 09:45:23.566 |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
-app | 2026-01-07 09:45:23.567 |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
-app | 2026-01-07 09:45:23.567 |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-app | 2026-01-07 09:45:23.567 |   File "/code/app/main.py", line 6, in <module>
-app | 2026-01-07 09:45:23.567 |     from app.db.session import engixne
-app | 2026-01-07 09:45:23.567 | ImportError: cannot import name 'engixne' from 'app.db.session' (/code/app/db/session.py)
-app | 2026-01-07 09:48:08.919 | INFO:     Started server process [1]
-app | 2026-01-07 09:48:08.919 | INFO:     Waiting for application startup.
-app | 2026-01-07 09:48:08.919 | INFO:     Application startup complete.
-app | 2026-01-07 09:48:08.919 | INFO:     Started server process [1]
-app | 2026-01-07 09:48:08.919 | INFO:     Waiting for application startup.
-app | 2026-01-07 09:48:08.919 | INFO:     Application startup complete.
-app | 2026-01-07 09:48:08.924 | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-app | 2026-01-07 09:48:08.924 | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-app | 2026-01-07 09:52:04.602 | INFO:     Shutting down
-app | 2026-01-07 09:52:04.602 | INFO:     Shutting down
-app | 2026-01-07 09:52:04.703 | INFO:     Waiting for application shutdown.
-app | 2026-01-07 09:52:04.703 | INFO:     Waiting for application shutdown.
-app | 2026-01-07 09:52:04.704 | INFO:     Application shutdown complete.
-app | 2026-01-07 09:52:04.704 | INFO:     Finished server process [1]
-app | 2026-01-07 09:52:04.704 | INFO:     Application shutdown complete.
-app | 2026-01-07 09:52:04.704 | INFO:     Finished server process [1]
-app | 2026-01-07 09:52:05.413 | Error response from daemon: can not get logs from container which is dead or marked for removal
-app | 2026-01-07 09:52:05.413 | Error response from daemon: can not get logs from container which is dead or marked for removal
-app | 2026-01-07 09:52:07.139 | INFO:     Started server process [1]
-app | 2026-01-07 09:52:07.139 | INFO:     Waiting for application startup.
-app | 2026-01-07 09:52:07.139 | INFO:     Application startup complete.
-app | 2026-01-07 09:52:07.139 | INFO:     Started server process [1]
-app | 2026-01-07 09:52:07.139 | INFO:     Waiting for application startup.
-app | 2026-01-07 09:52:07.139 | INFO:     Application startup complete.
-app | 2026-01-07 09:52:07.144 | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-app | 2026-01-07 09:52:07.144 | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 db  | 2026-01-07 09:52:51.250 | 2026-01-07 08:52:51.250 UTC [27] LOG:  checkpoint starting: time
 db  | 2026-01-07 09:52:58.485 | 2026-01-07 08:52:58.485 UTC [27] LOG:  checkpoint complete: wrote 72 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.150 s, sync=0.056 s, total=7.236 s; sync files=63, longest=0.005 s, average=0.001 s; distance=289 kB, estimate=289 kB
-app | 2026-01-07 09:58:08.188 | INFO:     Shutting down
-app | 2026-01-07 09:58:08.188 | INFO:     Shutting down
-app | 2026-01-07 09:58:08.290 | INFO:     Waiting for application shutdown.
-app | 2026-01-07 09:58:08.290 | INFO:     Application shutdown complete.
-app | 2026-01-07 09:58:08.290 | INFO:     Finished server process [1]
-app | 2026-01-07 09:58:08.290 | INFO:     Waiting for application shutdown.
-app | 2026-01-07 09:58:08.290 | INFO:     Application shutdown complete.
-app | 2026-01-07 09:58:08.290 | INFO:     Finished server process [1]
-app | 2026-01-07 09:58:08.952 | Error response from daemon: can not get logs from container which is dead or marked for removal
-app | 2026-01-07 09:58:08.963 | Error response from daemon: can not get logs from container which is dead or marked for removal
-app | 2026-01-07 09:58:10.617 | INFO:     Started server process [1]
-app | 2026-01-07 09:58:10.617 | INFO:     Waiting for application startup.
-app | 2026-01-07 09:58:10.617 | INFO:     Application startup complete.
-app | 2026-01-07 09:58:10.617 | INFO:     Started server process [1]
-app | 2026-01-07 09:58:10.617 | INFO:     Waiting for application startup.
-app | 2026-01-07 09:58:10.617 | INFO:     Application startup complete.
-app | 2026-01-07 09:58:10.622 | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-app | 2026-01-07 09:58:10.622 | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-app | 2026-01-07 09:58:22.076 | INFO:     172.19.0.1:55572 - "GET /docs HTTP/1.1" 200 OK
-app | 2026-01-07 09:58:22.076 | INFO:     172.19.0.1:55572 - "GET /docs HTTP/1.1" 200 OK
-app | 2026-01-07 09:58:22.309 | INFO:     172.19.0.1:55572 - "GET /openapi.json HTTP/1.1" 200 OK
-app | 2026-01-07 09:58:22.309 | INFO:     172.19.0.1:55572 - "GET /openapi.json HTTP/1.1" 200 OK
-app | 2026-01-07 09:58:35.594 | INFO:     172.19.0.1:55580 - "GET /test-error HTTP/1.1" 404 Not Found
-app | 2026-01-07 09:58:35.594 | INFO:     172.19.0.1:55580 - "GET /test-error HTTP/1.1" 404 Not Found
-app | 2026-01-07 09:58:58.659 | INFO:     172.19.0.1:49646 - "GET /zones/ HTTP/1.1" 200 OK
-app | 2026-01-07 09:58:58.659 | INFO:     172.19.0.1:49646 - "GET /zones/ HTTP/1.1" 200 OK
-app | 2026-01-07 09:59:36.642 | INFO:     172.19.0.1:53592 - "POST /zones/ HTTP/1.1" 200 OK
-app | 2026-01-07 09:59:36.642 | INFO:     172.19.0.1:53592 - "POST /zones/ HTTP/1.1" 200 OK
-app | 2026-01-07 09:59:41.389 | INFO:     172.19.0.1:53592 - "POST /zones/ HTTP/1.1" 200 OK
-app | 2026-01-07 09:59:41.389 | INFO:     172.19.0.1:53592 - "POST /zones/ HTTP/1.1" 200 OK
-app | 2026-01-07 09:59:48.251 | INFO:     172.19.0.1:48472 - "GET /zones/ HTTP/1.1" 200 OK
-app | 2026-01-07 09:59:48.251 | INFO:     172.19.0.1:48472 - "GET /zones/ HTTP/1.1" 200 OK
 db  | 2026-01-07 10:02:51.263 | 2026-01-07 09:02:51.263 UTC [27] LOG:  checkpoint starting: time
 db  | 2026-01-07 10:02:52.126 | 2026-01-07 09:02:52.126 UTC [27] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.815 s, sync=0.014 s, total=0.864 s; sync files=7, longest=0.007 s, average=0.002 s; distance=1 kB, estimate=260 kB
-app | 2026-01-07 11:44:12.760 | INFO:     Shutting down
-app | 2026-01-07 11:44:12.760 | INFO:     Shutting down
-app | 2026-01-07 11:44:12.862 | INFO:     Waiting for application shutdown.
-app | 2026-01-07 11:44:12.862 | INFO:     Waiting for application shutdown.
-app | 2026-01-07 11:44:12.866 | INFO:     Application shutdown complete.
-app | 2026-01-07 11:44:12.866 | INFO:     Application shutdown complete.
-app | 2026-01-07 11:44:12.867 | INFO:     Finished server process [1]
-app | 2026-01-07 11:44:12.867 | INFO:     Finished server process [1]
-app | 2026-01-07 11:44:13.707 | Error response from daemon: can not get logs from container which is dead or marked for removal
-app | 2026-01-07 11:44:13.708 | Error response from daemon: can not get logs from container which is dead or marked for removal
-app | 2026-01-07 11:44:14.930 | Traceback (most recent call last):
-app | 2026-01-07 11:44:14.930 |   File "/usr/local/bin/uvicorn", line 8, in <module>
-app | 2026-01-07 11:44:14.930 |     sys.exit(main())
-app | 2026-01-07 11:44:14.930 |              ^^^^^^
-app | 2026-01-07 11:44:14.930 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1485, in __call__
-app | 2026-01-07 11:44:14.931 |     return self.main(*args, **kwargs)
-app | 2026-01-07 11:44:14.931 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.931 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1406, in main
-app | 2026-01-07 11:44:14.930 | Traceback (most recent call last):
-app | 2026-01-07 11:44:14.930 |   File "/usr/local/bin/uvicorn", line 8, in <module>
-app | 2026-01-07 11:44:14.930 |     sys.exit(main())
-app | 2026-01-07 11:44:14.930 |              ^^^^^^
-app | 2026-01-07 11:44:14.930 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1485, in __call__
-app | 2026-01-07 11:44:14.931 |     return self.main(*args, **kwargs)
-app | 2026-01-07 11:44:14.931 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.931 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1406, in main
-app | 2026-01-07 11:44:14.931 |     rv = self.invoke(ctx)
-app | 2026-01-07 11:44:14.931 |          ^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.931 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1269, in invoke
-app | 2026-01-07 11:44:14.931 |     return ctx.invoke(self.callback, **ctx.params)
-app | 2026-01-07 11:44:14.931 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.931 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 824, in invoke
-app | 2026-01-07 11:44:14.932 |     return callback(*args, **kwargs)
-app | 2026-01-07 11:44:14.932 |            ^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.932 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 424, in main
-app | 2026-01-07 11:44:14.931 |     rv = self.invoke(ctx)
-app | 2026-01-07 11:44:14.931 |          ^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.931 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1269, in invoke
-app | 2026-01-07 11:44:14.931 |     return ctx.invoke(self.callback, **ctx.params)
-app | 2026-01-07 11:44:14.931 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.931 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 824, in invoke
-app | 2026-01-07 11:44:14.932 |     return callback(*args, **kwargs)
-app | 2026-01-07 11:44:14.932 |            ^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.932 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 424, in main
-app | 2026-01-07 11:44:14.932 |     run(
-app | 2026-01-07 11:44:14.932 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 594, in run
-app | 2026-01-07 11:44:14.932 |     server.run()
-app | 2026-01-07 11:44:14.932 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 67, in run
-app | 2026-01-07 11:44:14.932 |     run(
-app | 2026-01-07 11:44:14.932 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 594, in run
-app | 2026-01-07 11:44:14.932 |     server.run()
-app | 2026-01-07 11:44:14.932 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 67, in run
-app | 2026-01-07 11:44:14.933 |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
-app | 2026-01-07 11:44:14.933 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.933 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
-app | 2026-01-07 11:44:14.933 |     return runner.run(main)
-app | 2026-01-07 11:44:14.933 |            ^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.933 |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
-app | 2026-01-07 11:44:14.933 |     return self._loop.run_until_complete(task)
-app | 2026-01-07 11:44:14.933 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.933 |   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
-app | 2026-01-07 11:44:14.933 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 71, in serve
-app | 2026-01-07 11:44:14.933 |     await self._serve(sockets)
-app | 2026-01-07 11:44:14.933 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 78, in _serve
-app | 2026-01-07 11:44:14.934 |     config.load()
-app | 2026-01-07 11:44:14.934 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 439, in load
-app | 2026-01-07 11:44:14.933 |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
-app | 2026-01-07 11:44:14.933 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.933 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
-app | 2026-01-07 11:44:14.933 |     return runner.run(main)
-app | 2026-01-07 11:44:14.933 |            ^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.933 |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
-app | 2026-01-07 11:44:14.933 |     return self._loop.run_until_complete(task)
-app | 2026-01-07 11:44:14.933 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.933 |   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
-app | 2026-01-07 11:44:14.933 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 71, in serve
-app | 2026-01-07 11:44:14.933 |     await self._serve(sockets)
-app | 2026-01-07 11:44:14.933 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 78, in _serve
-app | 2026-01-07 11:44:14.934 |     config.load()
-app | 2026-01-07 11:44:14.934 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 439, in load
-app | 2026-01-07 11:44:14.934 |     self.loaded_app = import_from_string(self.app)
-app | 2026-01-07 11:44:14.934 |     self.loaded_app = import_from_string(self.app)
-app | 2026-01-07 11:44:14.934 |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.934 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
-app | 2026-01-07 11:44:14.934 |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.934 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
-app | 2026-01-07 11:44:14.935 |     module = importlib.import_module(module_str)
-app | 2026-01-07 11:44:14.935 |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.935 |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
-app | 2026-01-07 11:44:14.935 |     return _bootstrap._gcd_import(name[level:], package, level)
-app | 2026-01-07 11:44:14.935 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.935 |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
-app | 2026-01-07 11:44:14.935 |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
-app | 2026-01-07 11:44:14.935 |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
-app | 2026-01-07 11:44:14.935 |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
-app | 2026-01-07 11:44:14.935 |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
-app | 2026-01-07 11:44:14.935 |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-app | 2026-01-07 11:44:14.935 |   File "/code/app/main.py", line 8, in <module>
-app | 2026-01-07 11:44:14.935 |     from app.api.v1.endpoints import zones, livreurs, clients, destinataires
-app | 2026-01-07 11:44:14.935 |   File "/code/app/api/v1/endpoints/clients.py", line 5, in <module>
-app | 2026-01-07 11:44:14.935 |     from app.crud import client_expediteur as crud_client
-app | 2026-01-07 11:44:14.935 | ImportError: cannot import name 'client_expediteur' from 'app.crud' (unknown location)
-app | 2026-01-07 11:44:14.935 |     module = importlib.import_module(module_str)
-app | 2026-01-07 11:44:14.935 |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.935 |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
-app | 2026-01-07 11:44:14.935 |     return _bootstrap._gcd_import(name[level:], package, level)
-app | 2026-01-07 11:44:14.935 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-app | 2026-01-07 11:44:14.935 |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
-app | 2026-01-07 11:44:14.935 |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
-app | 2026-01-07 11:44:14.935 |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
-app | 2026-01-07 11:44:14.935 |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
-app | 2026-01-07 11:44:14.935 |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
-app | 2026-01-07 11:44:14.935 |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-app | 2026-01-07 11:44:14.935 |   File "/code/app/main.py", line 8, in <module>
-app | 2026-01-07 11:44:14.935 |     from app.api.v1.endpoints import zones, livreurs, clients, destinataires
-app | 2026-01-07 11:44:14.935 |   File "/code/app/api/v1/endpoints/clients.py", line 5, in <module>
-app | 2026-01-07 11:44:14.935 |     from app.crud import client_expediteur as crud_client
-app | 2026-01-07 11:44:14.935 | ImportError: cannot import name 'client_expediteur' from 'app.crud' (unknown location)
+db  | 2026-01-07 11:49:01.956 | 
+db  | 2026-01-07 11:49:01.956 | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db  | 2026-01-07 11:49:01.956 | 
+db  | 2026-01-07 11:49:01.987 | 2026-01-07 10:49:01.987 UTC [1] LOG:  starting PostgreSQL 15.15 (Debian 15.15-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+db  | 2026-01-07 11:49:01.988 | 2026-01-07 10:49:01.988 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db  | 2026-01-07 11:49:01.988 | 2026-01-07 10:49:01.988 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db  | 2026-01-07 11:49:01.991 | 2026-01-07 10:49:01.991 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db  | 2026-01-07 11:49:01.995 | 2026-01-07 10:49:01.995 UTC [29] LOG:  database system was interrupted; last known up at 2026-01-07 09:02:52 UTC
+db  | 2026-01-07 11:49:02.284 | 2026-01-07 10:49:02.283 UTC [29] LOG:  database system was not properly shut down; automatic recovery in progress
+db  | 2026-01-07 11:49:02.287 | 2026-01-07 10:49:02.287 UTC [29] LOG:  redo starts at 0/19E8D90
+db  | 2026-01-07 11:49:02.287 | 2026-01-07 10:49:02.287 UTC [29] LOG:  invalid record length at 0/19E8E78: wanted 24, got 0
+db  | 2026-01-07 11:49:02.287 | 2026-01-07 10:49:02.287 UTC [29] LOG:  redo done at 0/19E8E40 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+db  | 2026-01-07 11:49:02.291 | 2026-01-07 10:49:02.290 UTC [27] LOG:  checkpoint starting: end-of-recovery immediate wait
+db  | 2026-01-07 11:49:02.302 | 2026-01-07 10:49:02.302 UTC [27] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.002 s, total=0.013 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB
+db  | 2026-01-07 11:49:02.306 | 2026-01-07 10:49:02.306 UTC [1] LOG:  database system is ready to accept connections
+db  | 2026-01-07 12:03:40.290 | 2026-01-07 11:03:40.289 UTC [45] ERROR:  duplicate key value violates unique constraint "ix_clients_expediteurs_email"
+db  | 2026-01-07 12:03:40.290 | 2026-01-07 11:03:40.289 UTC [45] DETAIL:  Key (email)=(string) already exists.
+db  | 2026-01-07 12:03:40.290 | 2026-01-07 11:03:40.289 UTC [45] STATEMENT:  INSERT INTO clients_expediteurs (nom, prenom, email, telephone, adresse) VALUES ('string', 'string', 'string', 'string', 'string') RETURNING clients_expediteurs.id
+db  | 2026-01-07 12:04:03.002 | 2026-01-07 11:04:03.002 UTC [27] LOG:  checkpoint starting: time
+db  | 2026-01-07 12:04:06.533 | 2026-01-07 11:04:06.533 UTC [27] LOG:  checkpoint complete: wrote 36 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.512 s, sync=0.009 s, total=3.531 s; sync files=25, longest=0.004 s, average=0.001 s; distance=20 kB, estimate=20 kB
+db  | 2026-01-07 12:14:02.926 | 2026-01-07 11:14:02.925 UTC [27] LOG:  checkpoint starting: time
+db  | 2026-01-07 12:14:04.163 | 2026-01-07 11:14:04.162 UTC [27] LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.217 s, sync=0.007 s, total=1.238 s; sync files=11, longest=0.004 s, average=0.001 s; distance=1 kB, estimate=18 kB
+app | 2026-01-07 12:14:23.910 | INFO:     Started server process [1]
+app | 2026-01-07 12:14:23.910 | INFO:     Waiting for application startup.
+app | 2026-01-07 12:14:23.910 | INFO:     Application startup complete.
+app | 2026-01-07 12:14:23.913 | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+app | 2026-01-07 12:14:25.087 | INFO:     172.19.0.1:45886 - "GET /docs HTTP/1.1" 200 OK
+app | 2026-01-07 12:14:25.192 | INFO:     172.19.0.1:45886 - "GET /openapi.json HTTP/1.1" 200 OK
+app | 2026-01-07 12:14:43.872 | INFO:     172.19.0.1:45894 - "GET /colis/ HTTP/1.1" 200 OK
+app | 2026-01-07 12:14:56.186 | INFO:     172.19.0.1:53610 - "PATCH /colis/1/assign HTTP/1.1" 200 OK
+db  | 2026-01-07 12:19:02.448 | 2026-01-07 11:19:02.447 UTC [27] LOG:  checkpoint starting: time
+db  | 2026-01-07 12:19:02.763 | 2026-01-07 11:19:02.763 UTC [27] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.005 s, total=0.316 s; sync files=4, longest=0.003 s, average=0.002 s; distance=0 kB, estimate=16 kB
+app | 2026-01-07 14:15:50.482 | INFO:     Shutting down
+app | 2026-01-07 14:15:50.583 | INFO:     Waiting for application shutdown.
+app | 2026-01-07 14:15:50.584 | INFO:     Application shutdown complete.
+app | 2026-01-07 14:15:50.584 | INFO:     Finished server process [1]
+app | 2026-01-07 14:15:51.101 | Error response from daemon: can not get logs from container which is dead or marked for removal
+app | 2026-01-07 14:15:52.329 | INFO:     Started server process [1]
+app | 2026-01-07 14:15:52.329 | INFO:     Waiting for application startup.
+app | 2026-01-07 14:15:52.329 | INFO:     Application startup complete.
+app | 2026-01-07 14:15:52.329 | INFO:     Started server process [1]
+app | 2026-01-07 14:15:52.329 | INFO:     Waiting for application startup.
+app | 2026-01-07 14:15:52.329 | INFO:     Application startup complete.
+app | 2026-01-07 14:15:52.334 | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+app | 2026-01-07 14:15:52.334 | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+app | 2026-01-07 14:16:05.822 | INFO:     172.19.0.1:59876 - "GET /docs HTTP/1.1" 200 OK
+app | 2026-01-07 14:16:05.822 | INFO:     172.19.0.1:59876 - "GET /docs HTTP/1.1" 200 OK
+app | 2026-01-07 14:16:05.940 | INFO:     172.19.0.1:59876 - "GET /openapi.json HTTP/1.1" 200 OK
+app | 2026-01-07 14:16:05.940 | INFO:     172.19.0.1:59876 - "GET /openapi.json HTTP/1.1" 200 OK
+app | 2026-01-07 14:16:29.906 | INFO:     172.19.0.1:59868 - "PATCH /colis/1/status HTTP/1.1" 200 OK
+app | 2026-01-07 14:16:29.906 | INFO:     172.19.0.1:59868 - "PATCH /colis/1/status HTTP/1.1" 200 OK
+app | 2026-01-07 14:17:24.152 | INFO:     172.19.0.1:43472 - "GET /docs HTTP/1.1" 200 OK
+app | 2026-01-07 14:17:24.152 | INFO:     172.19.0.1:43472 - "GET /docs HTTP/1.1" 200 OK
+app | 2026-01-07 14:17:24.234 | INFO:     172.19.0.1:43472 - "GET /openapi.json HTTP/1.1" 200 OK
+app | 2026-01-07 14:17:24.234 | INFO:     172.19.0.1:43472 - "GET /openapi.json HTTP/1.1" 200 OK
+db  | 2026-01-07 14:19:04.585 | 2026-01-07 13:19:04.585 UTC [27] LOG:  checkpoint starting: time
+db  | 2026-01-07 14:19:06.123 | 2026-01-07 13:19:06.123 UTC [27] LOG:  checkpoint complete: wrote 16 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.517 s, sync=0.009 s, total=1.538 s; sync files=14, longest=0.005 s, average=0.001 s; distance=1 kB, estimate=14 kB
+app | 2026-01-07 14:32:53.606 | INFO:     Shutting down
+app | 2026-01-07 14:32:53.606 | INFO:     Shutting down
+app | 2026-01-07 14:32:53.706 | INFO:     Waiting for application shutdown.
+app | 2026-01-07 14:32:53.706 | INFO:     Waiting for application shutdown.
+app | 2026-01-07 14:32:53.706 | INFO:     Application shutdown complete.
+app | 2026-01-07 14:32:53.706 | INFO:     Finished server process [1]
+app | 2026-01-07 14:32:53.706 | INFO:     Application shutdown complete.
+app | 2026-01-07 14:32:53.706 | INFO:     Finished server process [1]
+app | 2026-01-07 14:32:54.359 | Error response from daemon: can not get logs from container which is dead or marked for removal
+app | 2026-01-07 14:32:54.370 | Error response from daemon: can not get logs from container which is dead or marked for removal
+app | 2026-01-07 14:32:55.508 | INFO:     Started server process [1]
+app | 2026-01-07 14:32:55.508 | INFO:     Waiting for application startup.
+app | 2026-01-07 14:32:55.508 | INFO:     Application startup complete.
+app | 2026-01-07 14:32:55.508 | INFO:     Started server process [1]
+app | 2026-01-07 14:32:55.508 | INFO:     Waiting for application startup.
+app | 2026-01-07 14:32:55.508 | INFO:     Application startup complete.
+app | 2026-01-07 14:32:55.512 | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+app | 2026-01-07 14:32:55.512 | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+app | 2026-01-07 14:33:01.525 | INFO:     172.19.0.1:38848 - "GET /docs HTTP/1.1" 200 OK
+app | 2026-01-07 14:33:01.525 | INFO:     172.19.0.1:38848 - "GET /docs HTTP/1.1" 200 OK
+app | 2026-01-07 14:33:01.633 | INFO:     172.19.0.1:38848 - "GET /openapi.json HTTP/1.1" 200 OK
+app | 2026-01-07 14:33:01.633 | INFO:     172.19.0.1:38848 - "GET /openapi.json HTTP/1.1" 200 OK
+app | 2026-01-07 14:45:23.597 | INFO:     Shutting down
+app | 2026-01-07 14:45:23.597 | INFO:     Shutting down
+app | 2026-01-07 14:45:23.698 | INFO:     Waiting for application shutdown.
+app | 2026-01-07 14:45:23.698 | INFO:     Application shutdown complete.
+app | 2026-01-07 14:45:23.698 | INFO:     Finished server process [1]
+app | 2026-01-07 14:45:23.698 | INFO:     Waiting for application shutdown.
+app | 2026-01-07 14:45:23.698 | INFO:     Application shutdown complete.
+app | 2026-01-07 14:45:23.698 | INFO:     Finished server process [1]
+app | 2026-01-07 14:45:24.282 | Error response from daemon: can not get logs from container which is dead or marked for removal
+app | 2026-01-07 14:45:24.283 | Error response from daemon: can not get logs from container which is dead or marked for removal
+app | 2026-01-07 14:45:25.416 | INFO:     Started server process [1]
+app | 2026-01-07 14:45:25.416 | INFO:     Waiting for application startup.
+app | 2026-01-07 14:45:25.416 | INFO:     Application startup complete.
+app | 2026-01-07 14:45:25.416 | INFO:     Started server process [1]
+app | 2026-01-07 14:45:25.416 | INFO:     Waiting for application startup.
+app | 2026-01-07 14:45:25.416 | INFO:     Application startup complete.
+app | 2026-01-07 14:45:25.419 | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+app | 2026-01-07 14:45:25.419 | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+db  | 2026-01-07 14:54:04.775 | 2026-01-07 13:54:04.774 UTC [27] LOG:  checkpoint starting: time
+db  | 2026-01-07 14:54:05.813 | 2026-01-07 13:54:05.813 UTC [27] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.020 s, sync=0.006 s, total=1.040 s; sync files=11, longest=0.003 s, average=0.001 s; distance=3 kB, estimate=13 kB
+app | 2026-01-07 14:55:10.577 | INFO:     Shutting down
+app | 2026-01-07 14:55:10.577 | INFO:     Shutting down
+app | 2026-01-07 14:55:10.678 | INFO:     Waiting for application shutdown.
+app | 2026-01-07 14:55:10.679 | INFO:     Application shutdown complete.
+app | 2026-01-07 14:55:10.679 | INFO:     Finished server process [1]
+app | 2026-01-07 14:55:10.678 | INFO:     Waiting for application shutdown.
+app | 2026-01-07 14:55:10.679 | INFO:     Application shutdown complete.
+app | 2026-01-07 14:55:10.679 | INFO:     Finished server process [1]
+app | 2026-01-07 14:55:11.313 | Error response from daemon: can not get logs from container which is dead or marked for removal
+app | 2026-01-07 14:55:11.313 | Error response from daemon: can not get logs from container which is dead or marked for removal
+app | 2026-01-07 14:55:12.288 | Traceback (most recent call last):
+app | 2026-01-07 14:55:12.288 |   File "/usr/local/bin/uvicorn", line 8, in <module>
+app | 2026-01-07 14:55:12.288 |     sys.exit(main())
+app | 2026-01-07 14:55:12.288 |              ^^^^^^
+app | 2026-01-07 14:55:12.288 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1485, in __call__
+app | 2026-01-07 14:55:12.288 | Traceback (most recent call last):
+app | 2026-01-07 14:55:12.288 |   File "/usr/local/bin/uvicorn", line 8, in <module>
+app | 2026-01-07 14:55:12.288 |     sys.exit(main())
+app | 2026-01-07 14:55:12.288 |              ^^^^^^
+app | 2026-01-07 14:55:12.288 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1485, in __call__
+app | 2026-01-07 14:55:12.289 |     return self.main(*args, **kwargs)
+app | 2026-01-07 14:55:12.289 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.289 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1406, in main
+app | 2026-01-07 14:55:12.290 |     rv = self.invoke(ctx)
+app | 2026-01-07 14:55:12.290 |          ^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.290 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1269, in invoke
+app | 2026-01-07 14:55:12.289 |     return self.main(*args, **kwargs)
+app | 2026-01-07 14:55:12.289 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.289 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1406, in main
+app | 2026-01-07 14:55:12.290 |     rv = self.invoke(ctx)
+app | 2026-01-07 14:55:12.290 |          ^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.290 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1269, in invoke
+app | 2026-01-07 14:55:12.290 |     return ctx.invoke(self.callback, **ctx.params)
+app | 2026-01-07 14:55:12.290 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.290 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 824, in invoke
+app | 2026-01-07 14:55:12.290 |     return callback(*args, **kwargs)
+app | 2026-01-07 14:55:12.290 |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.290 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 424, in main
+app | 2026-01-07 14:55:12.290 |     return ctx.invoke(self.callback, **ctx.params)
+app | 2026-01-07 14:55:12.290 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.290 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 824, in invoke
+app | 2026-01-07 14:55:12.290 |     return callback(*args, **kwargs)
+app | 2026-01-07 14:55:12.290 |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.290 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 424, in main
+app | 2026-01-07 14:55:12.293 |     run(
+app | 2026-01-07 14:55:12.293 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 594, in run
+app | 2026-01-07 14:55:12.293 |     server.run()
+app | 2026-01-07 14:55:12.293 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 67, in run
+app | 2026-01-07 14:55:12.293 |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+app | 2026-01-07 14:55:12.293 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.293 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+app | 2026-01-07 14:55:12.293 |     return runner.run(main)
+app | 2026-01-07 14:55:12.293 |            ^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.293 |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+app | 2026-01-07 14:55:12.293 |     return self._loop.run_until_complete(task)
+app | 2026-01-07 14:55:12.293 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.293 |   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+app | 2026-01-07 14:55:12.293 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 71, in serve
+app | 2026-01-07 14:55:12.294 |     await self._serve(sockets)
+app | 2026-01-07 14:55:12.294 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 78, in _serve
+app | 2026-01-07 14:55:12.294 |     config.load()
+app | 2026-01-07 14:55:12.294 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 439, in load
+app | 2026-01-07 14:55:12.294 |     self.loaded_app = import_from_string(self.app)
+app | 2026-01-07 14:55:12.294 |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.294 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+app | 2026-01-07 14:55:12.293 |     run(
+app | 2026-01-07 14:55:12.293 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 594, in run
+app | 2026-01-07 14:55:12.293 |     server.run()
+app | 2026-01-07 14:55:12.293 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 67, in run
+app | 2026-01-07 14:55:12.293 |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+app | 2026-01-07 14:55:12.293 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.293 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+app | 2026-01-07 14:55:12.293 |     return runner.run(main)
+app | 2026-01-07 14:55:12.293 |            ^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.293 |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+app | 2026-01-07 14:55:12.293 |     return self._loop.run_until_complete(task)
+app | 2026-01-07 14:55:12.293 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.293 |   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+app | 2026-01-07 14:55:12.293 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 71, in serve
+app | 2026-01-07 14:55:12.294 |     await self._serve(sockets)
+app | 2026-01-07 14:55:12.294 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 78, in _serve
+app | 2026-01-07 14:55:12.294 |     config.load()
+app | 2026-01-07 14:55:12.294 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 439, in load
+app | 2026-01-07 14:55:12.294 |     self.loaded_app = import_from_string(self.app)
+app | 2026-01-07 14:55:12.294 |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.294 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+app | 2026-01-07 14:55:12.295 |     module = importlib.import_module(module_str)
+app | 2026-01-07 14:55:12.295 |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.295 |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+app | 2026-01-07 14:55:12.295 |     return _bootstrap._gcd_import(name[level:], package, level)
+app | 2026-01-07 14:55:12.295 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.295 |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+app | 2026-01-07 14:55:12.295 |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+app | 2026-01-07 14:55:12.295 |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+app | 2026-01-07 14:55:12.295 |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+app | 2026-01-07 14:55:12.295 |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+app | 2026-01-07 14:55:12.295 |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+app | 2026-01-07 14:55:12.295 |   File "/code/app/main.py", line 8, in <module>
+app | 2026-01-07 14:55:12.295 |     from app.api.v1.endpoints import zones, livreurs, clients, destinataires, colis
+app | 2026-01-07 14:55:12.295 |   File "/code/app/api/v1/endpoints/zones.py", line 5, in <module>
+app | 2026-01-07 14:55:12.295 |     from app.crud import zone as crud_zone
+app | 2026-01-07 14:55:12.295 |   File "/code/app/crud/__init__.py", line 1, in <module>
+app | 2026-01-07 14:55:12.295 |     module = importlib.import_module(module_str)
+app | 2026-01-07 14:55:12.295 |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.295 |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+app | 2026-01-07 14:55:12.295 |     return _bootstrap._gcd_import(name[level:], package, level)
+app | 2026-01-07 14:55:12.295 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.295 |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+app | 2026-01-07 14:55:12.295 |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+app | 2026-01-07 14:55:12.295 |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+app | 2026-01-07 14:55:12.295 |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+app | 2026-01-07 14:55:12.295 |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+app | 2026-01-07 14:55:12.295 |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+app | 2026-01-07 14:55:12.295 |   File "/code/app/main.py", line 8, in <module>
+app | 2026-01-07 14:55:12.295 |     from app.api.v1.endpoints import zones, livreurs, clients, destinataires, colis
+app | 2026-01-07 14:55:12.295 |   File "/code/app/api/v1/endpoints/zones.py", line 5, in <module>
+app | 2026-01-07 14:55:12.295 |     from app.crud import zone as crud_zone
+app | 2026-01-07 14:55:12.295 |   File "/code/app/crud/__init__.py", line 1, in <module>
+app | 2026-01-07 14:55:12.295 |     from . import client as client_expediteur
+app | 2026-01-07 14:55:12.295 |   File "/code/app/crud/client.py", line 3, in <module>
+app | 2026-01-07 14:55:12.295 |     from app.schemas.client_expediteur import ClientCreate
+app | 2026-01-07 14:55:12.295 |   File "/code/app/schemas/__init__.py", line 1, in <module>
+app | 2026-01-07 14:55:12.295 |     from . import client_expediteur
+app | 2026-01-07 14:55:12.295 |   File "/code/app/schemas/client_expediteur.py", line 13, in <module>
+app | 2026-01-07 14:55:12.295 |     class Client(ClientBase):
+app | 2026-01-07 14:55:12.295 |   File "/usr/local/lib/python3.11/site-packages/pydantic/_internal/_model_construction.py", line 132, in __new__
+app | 2026-01-07 14:55:12.296 |     private_attributes = inspect_namespace(
+app | 2026-01-07 14:55:12.296 |                          ^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.296 |   File "/usr/local/lib/python3.11/site-packages/pydantic/_internal/_model_construction.py", line 481, in inspect_namespace
+app | 2026-01-07 14:55:12.296 |     raise PydanticUserError(
+app | 2026-01-07 14:55:12.296 | pydantic.errors.PydanticUserError: A non-annotated attribute was detected: `ConfigDict = {'from_attributes': True}`. All model fields require a type annotation; if `ConfigDict` is not meant to be a field, you may be able to resolve this error by annotating it as a `ClassVar` or updating `model_config['ignored_types']`.
+app | 2026-01-07 14:55:12.296 | 
+app | 2026-01-07 14:55:12.296 | For further information visit https://errors.pydantic.dev/2.12/u/model-field-missing-annotation
+app | 2026-01-07 14:55:12.295 |     from . import client as client_expediteur
+app | 2026-01-07 14:55:12.295 |   File "/code/app/crud/client.py", line 3, in <module>
+app | 2026-01-07 14:55:12.295 |     from app.schemas.client_expediteur import ClientCreate
+app | 2026-01-07 14:55:12.295 |   File "/code/app/schemas/__init__.py", line 1, in <module>
+app | 2026-01-07 14:55:12.295 |     from . import client_expediteur
+app | 2026-01-07 14:55:12.295 |   File "/code/app/schemas/client_expediteur.py", line 13, in <module>
+app | 2026-01-07 14:55:12.295 |     class Client(ClientBase):
+app | 2026-01-07 14:55:12.295 |   File "/usr/local/lib/python3.11/site-packages/pydantic/_internal/_model_construction.py", line 132, in __new__
+app | 2026-01-07 14:55:12.296 |     private_attributes = inspect_namespace(
+app | 2026-01-07 14:55:12.296 |                          ^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:55:12.296 |   File "/usr/local/lib/python3.11/site-packages/pydantic/_internal/_model_construction.py", line 481, in inspect_namespace
+app | 2026-01-07 14:55:12.296 |     raise PydanticUserError(
+app | 2026-01-07 14:55:12.296 | pydantic.errors.PydanticUserError: A non-annotated attribute was detected: `ConfigDict = {'from_attributes': True}`. All model fields require a type annotation; if `ConfigDict` is not meant to be a field, you may be able to resolve this error by annotating it as a `ClassVar` or updating `model_config['ignored_types']`.
+app | 2026-01-07 14:55:12.296 | 
+app | 2026-01-07 14:55:12.296 | For further information visit https://errors.pydantic.dev/2.12/u/model-field-missing-annotation
+app | 2026-01-07 14:56:16.762 | Traceback (most recent call last):
+app | 2026-01-07 14:56:16.762 |   File "/usr/local/bin/uvicorn", line 8, in <module>
+app | 2026-01-07 14:56:16.762 |     sys.exit(main())
+app | 2026-01-07 14:56:16.762 |              ^^^^^^
+app | 2026-01-07 14:56:16.762 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1485, in __call__
+app | 2026-01-07 14:56:16.762 | Traceback (most recent call last):
+app | 2026-01-07 14:56:16.762 |   File "/usr/local/bin/uvicorn", line 8, in <module>
+app | 2026-01-07 14:56:16.762 |     sys.exit(main())
+app | 2026-01-07 14:56:16.762 |              ^^^^^^
+app | 2026-01-07 14:56:16.762 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1485, in __call__
+app | 2026-01-07 14:56:16.764 |     return self.main(*args, **kwargs)
+app | 2026-01-07 14:56:16.764 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.764 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1406, in main
+app | 2026-01-07 14:56:16.764 |     return self.main(*args, **kwargs)
+app | 2026-01-07 14:56:16.764 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.764 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1406, in main
+app | 2026-01-07 14:56:16.765 |     rv = self.invoke(ctx)
+app | 2026-01-07 14:56:16.765 |          ^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.765 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1269, in invoke
+app | 2026-01-07 14:56:16.765 |     return ctx.invoke(self.callback, **ctx.params)
+app | 2026-01-07 14:56:16.765 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.765 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 824, in invoke
+app | 2026-01-07 14:56:16.765 |     return callback(*args, **kwargs)
+app | 2026-01-07 14:56:16.765 |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.765 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 424, in main
+app | 2026-01-07 14:56:16.765 |     rv = self.invoke(ctx)
+app | 2026-01-07 14:56:16.765 |          ^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.765 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1269, in invoke
+app | 2026-01-07 14:56:16.765 |     return ctx.invoke(self.callback, **ctx.params)
+app | 2026-01-07 14:56:16.765 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.765 |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 824, in invoke
+app | 2026-01-07 14:56:16.765 |     return callback(*args, **kwargs)
+app | 2026-01-07 14:56:16.765 |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.765 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 424, in main
+app | 2026-01-07 14:56:16.766 |     run(
+app | 2026-01-07 14:56:16.766 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 594, in run
+app | 2026-01-07 14:56:16.766 |     server.run()
+app | 2026-01-07 14:56:16.766 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 67, in run
+app | 2026-01-07 14:56:16.766 |     run(
+app | 2026-01-07 14:56:16.766 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 594, in run
+app | 2026-01-07 14:56:16.766 |     server.run()
+app | 2026-01-07 14:56:16.766 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 67, in run
+app | 2026-01-07 14:56:16.766 |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+app | 2026-01-07 14:56:16.766 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.766 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+app | 2026-01-07 14:56:16.766 |     return runner.run(main)
+app | 2026-01-07 14:56:16.766 |            ^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.766 |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+app | 2026-01-07 14:56:16.766 |     return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+app | 2026-01-07 14:56:16.766 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.766 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+app | 2026-01-07 14:56:16.766 |     return runner.run(main)
+app | 2026-01-07 14:56:16.766 |            ^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.766 |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+app | 2026-01-07 14:56:16.767 |     return self._loop.run_until_complete(task)
+app | 2026-01-07 14:56:16.767 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.767 |   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+app | 2026-01-07 14:56:16.767 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 71, in serve
+app | 2026-01-07 14:56:16.767 |     await self._serve(sockets)
+app | 2026-01-07 14:56:16.768 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 78, in _serve
+app | 2026-01-07 14:56:16.768 |     config.load()
+app | 2026-01-07 14:56:16.768 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 439, in load
+app | 2026-01-07 14:56:16.767 |     return self._loop.run_until_complete(task)
+app | 2026-01-07 14:56:16.767 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.767 |   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+app | 2026-01-07 14:56:16.767 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 71, in serve
+app | 2026-01-07 14:56:16.767 |     await self._serve(sockets)
+app | 2026-01-07 14:56:16.768 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 78, in _serve
+app | 2026-01-07 14:56:16.768 |     config.load()
+app | 2026-01-07 14:56:16.768 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 439, in load
+app | 2026-01-07 14:56:16.768 |     self.loaded_app = import_from_string(self.app)
+app | 2026-01-07 14:56:16.768 |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.768 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+app | 2026-01-07 14:56:16.768 |     module = importlib.import_module(module_str)
+app | 2026-01-07 14:56:16.768 |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.768 |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+app | 2026-01-07 14:56:16.768 |     self.loaded_app = import_from_string(self.app)
+app | 2026-01-07 14:56:16.768 |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.768 |   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+app | 2026-01-07 14:56:16.768 |     module = importlib.import_module(module_str)
+app | 2026-01-07 14:56:16.768 |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.768 |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+app | 2026-01-07 14:56:16.769 |     return _bootstrap._gcd_import(name[level:], package, level)
+app | 2026-01-07 14:56:16.769 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.769 |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+app | 2026-01-07 14:56:16.769 |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+app | 2026-01-07 14:56:16.769 |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+app | 2026-01-07 14:56:16.769 |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+app | 2026-01-07 14:56:16.769 |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+app | 2026-01-07 14:56:16.769 |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+app | 2026-01-07 14:56:16.769 |   File "/code/app/main.py", line 8, in <module>
+app | 2026-01-07 14:56:16.769 |     return _bootstrap._gcd_import(name[level:], package, level)
+app | 2026-01-07 14:56:16.769 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.769 |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+app | 2026-01-07 14:56:16.769 |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+app | 2026-01-07 14:56:16.769 |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+app | 2026-01-07 14:56:16.769 |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+app | 2026-01-07 14:56:16.769 |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+app | 2026-01-07 14:56:16.769 |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+app | 2026-01-07 14:56:16.769 |   File "/code/app/main.py", line 8, in <module>
+app | 2026-01-07 14:56:16.770 |     from app.api.v1.endpoints import zones, livreurs, clients, destinataires, colis
+app | 2026-01-07 14:56:16.770 |   File "/code/app/api/v1/endpoints/zones.py", line 5, in <module>
+app | 2026-01-07 14:56:16.770 |     from app.crud import zone as crud_zone
+app | 2026-01-07 14:56:16.770 |   File "/code/app/crud/__init__.py", line 1, in <module>
+app | 2026-01-07 14:56:16.770 |     from app.api.v1.endpoints import zones, livreurs, clients, destinataires, colis
+app | 2026-01-07 14:56:16.770 |   File "/code/app/api/v1/endpoints/zones.py", line 5, in <module>
+app | 2026-01-07 14:56:16.770 |     from app.crud import zone as crud_zone
+app | 2026-01-07 14:56:16.770 |   File "/code/app/crud/__init__.py", line 1, in <module>
+app | 2026-01-07 14:56:16.771 |     from . import client as client_expediteur
+app | 2026-01-07 14:56:16.771 |   File "/code/app/crud/client.py", line 3, in <module>
+app | 2026-01-07 14:56:16.771 |     from app.schemas.client_expediteur import ClientCreate
+app | 2026-01-07 14:56:16.771 |   File "/code/app/schemas/__init__.py", line 1, in <module>
+app | 2026-01-07 14:56:16.771 |     from . import client as client_expediteur
+app | 2026-01-07 14:56:16.771 |   File "/code/app/crud/client.py", line 3, in <module>
+app | 2026-01-07 14:56:16.771 |     from app.schemas.client_expediteur import ClientCreate
+app | 2026-01-07 14:56:16.771 |   File "/code/app/schemas/__init__.py", line 1, in <module>
+app | 2026-01-07 14:56:16.771 |     from . import client_expediteur
+app | 2026-01-07 14:56:16.771 |   File "/code/app/schemas/client_expediteur.py", line 13, in <module>
+app | 2026-01-07 14:56:16.771 |     class Client(ClientBase):
+app | 2026-01-07 14:56:16.771 |   File "/usr/local/lib/python3.11/site-packages/pydantic/_internal/_model_construction.py", line 132, in __new__
+app | 2026-01-07 14:56:16.771 |     from . import client_expediteur
+app | 2026-01-07 14:56:16.771 |   File "/code/app/schemas/client_expediteur.py", line 13, in <module>
+app | 2026-01-07 14:56:16.771 |     class Client(ClientBase):
+app | 2026-01-07 14:56:16.771 |   File "/usr/local/lib/python3.11/site-packages/pydantic/_internal/_model_construction.py", line 132, in __new__
+app | 2026-01-07 14:56:16.772 |     private_attributes = inspect_namespace(
+app | 2026-01-07 14:56:16.772 |                          ^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.772 |   File "/usr/local/lib/python3.11/site-packages/pydantic/_internal/_model_construction.py", line 481, in inspect_namespace
+app | 2026-01-07 14:56:16.772 |     raise PydanticUserError(
+app | 2026-01-07 14:56:16.772 | pydantic.errors.PydanticUserError: A non-annotated attribute was detected: `ConfigDict = {'from_attributes': True}`. All model fields require a type annotation; if `ConfigDict` is not meant to be a field, you may be able to resolve this error by annotating it as a `ClassVar` or updating `model_config['ignored_types']`.
+app | 2026-01-07 14:56:16.772 | 
+app | 2026-01-07 14:56:16.772 | For further information visit https://errors.pydantic.dev/2.12/u/model-field-missing-annotation
+app | 2026-01-07 14:56:16.772 |     private_attributes = inspect_namespace(
+app | 2026-01-07 14:56:16.772 |                          ^^^^^^^^^^^^^^^^^^
+app | 2026-01-07 14:56:16.772 |   File "/usr/local/lib/python3.11/site-packages/pydantic/_internal/_model_construction.py", line 481, in inspect_namespace
+app | 2026-01-07 14:56:16.772 |     raise PydanticUserError(
+app | 2026-01-07 14:56:16.772 | pydantic.errors.PydanticUserError: A non-annotated attribute was detected: `ConfigDict = {'from_attributes': True}`. All model fields require a type annotation; if `ConfigDict` is not meant to be a field, you may be able to resolve this error by annotating it as a `ClassVar` or updating `model_config['ignored_types']`.
+app | 2026-01-07 14:56:16.772 | 
+app | 2026-01-07 14:56:16.772 | For further information visit https://errors.pydantic.dev/2.12/u/model-field-missing-annotation

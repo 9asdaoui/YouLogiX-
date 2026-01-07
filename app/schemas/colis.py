@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from typing import Optional
 
 class ColisBase(BaseModel):
@@ -17,8 +17,7 @@ class Colis(ColisBase):
     statut: str
     idLivreur: Optional[int] = None # Might be empty at the start
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 class ColisAssignLivreur(BaseModel):
     idLivreur: int
