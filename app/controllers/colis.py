@@ -5,7 +5,7 @@ from app.models.historique_statut import HistoriqueStatut
 from app.schemas.colis import ColisStatusUpdate
 
 
-def get_colis(db: Session, id_zone: int = None, statut: str = None):
+def list_colis(db: Session, id_zone: int = None, statut: str = None):
     query = db.query(Colis)
     
     if id_zone:
@@ -16,17 +16,17 @@ def get_colis(db: Session, id_zone: int = None, statut: str = None):
         
     return query.all()
 
-def get_colis_by_client(db: Session, client_id: int):
+def find_colis_by_client(db: Session, client_id: int):
     return db.query(Colis).filter(Colis.idClientExpediteur == client_id).all()
 
-def get_colis_by_id(db: Session, colis_id: int):
+def find_colis_by_id(db: Session, colis_id: int):
     return db.query(Colis).filter(Colis.id == colis_id).first()
 
-def get_colis_by_livreur(db: Session, livreur_id: int):
+def find_colis_by_livreur(db: Session, livreur_id: int):
     return db.query(Colis).filter(Colis.idLivreur == livreur_id).all()
 
 
-def create_colis(db: Session, colis: ColisCreate):
+def store_colis(db: Session, colis: ColisCreate):
     db_colis = Colis(**colis.model_dump())
     db.add(db_colis)
     db.commit()

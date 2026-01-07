@@ -2,10 +2,12 @@ from sqlalchemy.orm import Session
 from app.models.zone import Zone
 from app.schemas.zone import ZoneCreate
 
-def get_zones(db: Session):
+# Rename 'get_zones' to 'list_zones' (sounds more like a controller)
+def list_zones(db: Session):
     return db.query(Zone).all()
 
-def create_zone(db: Session, zone: ZoneCreate):
+# Rename 'create_zone' to 'store_zone'
+def store_zone(db: Session, zone: ZoneCreate):
     db_zone = Zone(nom=zone.nom, codePostal=zone.codePostal)
     db.add(db_zone)
     db.commit()
