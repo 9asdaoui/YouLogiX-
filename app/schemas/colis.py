@@ -19,3 +19,9 @@ class Colis(ColisBase):
 
     class Config:
         from_attributes = True
+
+class ColisAssignLivreur(BaseModel):
+    idLivreur: int
+
+class ColisStatusUpdate(BaseModel):
+    nouveauStatut: str # e.g., "collecté", "en transit", "livré"&&&&&&&&&&&&&&
