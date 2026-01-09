@@ -6,6 +6,8 @@ import app.models
 from app.db.session import engine
 from app.db.base import Base
 from app.api.v1.endpoints import zones, livreurs, clients, destinataires, colis
+from app.api.v1.auth import auth
+from app.api.v1.users import routes as user_routes
 
 
 Base.metadata.create_all(bind=engine)
@@ -33,6 +35,11 @@ app = FastAPI(
 def read_root():
     return {"status": "online", "project": settings.PROJECT_NAME}
 
+# Routes d'authentification
+app.include_router(auth.router, prefix="/auth", tags=["Authentication"])
+app.include_router(user_routes.router, prefix="/users", tags=["Users"])
+
+# Routes métier
 app.include_router(zones.router, prefix="/zones", tags=["Zones"])
 app.include_router(clients.router, prefix="/clients", tags=["Clients"])
 app.include_router(destinataires.router, prefix="/destinataires", tags=["Destinataires"])
