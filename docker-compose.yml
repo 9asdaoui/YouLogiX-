@@ -9,14 +9,14 @@ services:
       - POSTGRES_PASSWORD=redaader
       - POSTGRES_DB=youlogix_db
     ports:
-      - "5432:5432"
+      - "5442:5432"
 
   # The FastAPI App Service
   app:
     build: .
     container_name: youlogix_app_container
     ports:
-      - "8000:8000"
+      - "8160:8160"
     env_file:
       - .env
     depends_on:

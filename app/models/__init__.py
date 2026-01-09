@@ -5,3 +5,4 @@ from .client_expediteur import ClientExpediteur
 from .destinataire import Destinataire
 from .colis import Colis
 from .historique_statut import HistoriqueStatut
+from .user import User
