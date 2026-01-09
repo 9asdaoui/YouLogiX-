@@ -465,3 +465,5 @@ app | 2026-01-07 14:56:16.772 |     raise PydanticUserError(
 app | 2026-01-07 14:56:16.772 | pydantic.errors.PydanticUserError: A non-annotated attribute was detected: `ConfigDict = {'from_attributes': True}`. All model fields require a type annotation; if `ConfigDict` is not meant to be a field, you may be able to resolve this error by annotating it as a `ClassVar` or updating `model_config['ignored_types']`.
 app | 2026-01-07 14:56:16.772 | 
 app | 2026-01-07 14:56:16.772 | For further information visit https://errors.pydantic.dev/2.12/u/model-field-missing-annotation
+
+/docs
